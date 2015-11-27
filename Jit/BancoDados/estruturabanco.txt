@@ -1,0 +1,36 @@
+
+
+dbname=intermapbd
+
+PostGRee
+CREATE TABLE IF NOT EXISTS Usuario (
+     cod_usuario SERIAL NOT NULL,
+     login varchar(128) NOT NULL,
+     senha varchar(20) DEFAULT NULL,
+PRIMARY KEY (cod_usuario)
+)
+CREATE TABLE IF NOT EXISTS Batepapo_conversa(
+  cod_sessao SERIAL NOT NULL,
+  cod_usuario int NOT NULL,
+  cod_usuario_r int NOT NULL,
+  cod_fala varchar NOT NULL,
+  mensagem text,
+  data_mensagem date NOT NULL,
+  PRIMARY KEY (cod_sessao)
+)
+SQL
+CREATE TABLE Usuario (
+     cod_usuario int AUTO_INCREMENT NOT NULL,
+     login varchar(128) NOT NULL,
+     senha varchar(20) NOT NULL,
+PRIMARY KEY (cod_usuario)
+)
+CREATE TABLE Batepapo_conversa(
+  cod_sessao int AUTO_INCREMENT,
+  cod_usuario int NOT NULL,
+  cod_usuario_r int NOT NULL,
+  cod_fala varchar(50) NOT NULL,
+  mensagem varchar(100),
+  data_mensagem date NOT NULL,
+  PRIMARY KEY (cod_sessao)
+)

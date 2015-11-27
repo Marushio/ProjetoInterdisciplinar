@@ -1,0 +1,59 @@
+	
+	
+	.linha {
+	  
+		width: 25em;
+	    height: 0.5em;
+		display: block;
+		border-radius: 25px;
+        border: 2px solid #009ae1;
+        padding: 20px;
+		}
+	.apresentacao {
+	  
+		width: 20em;
+		height: 20em;
+		margin: 0 auto;
+		display: block;
+		border-radius: 25px;
+        border: 2px solid #009ae1;
+        padding: 20px; 
+		float:left;
+	}
+		.top {
+	  
+		width: 20em;
+		height: 20em;
+		margin: 0 auto;
+		display: block;
+		border-radius: 25px;
+        border: 2px solid #009ae1;
+        padding: 20px; 
+		position:relative;
+		float:left;
+	}
+	.menuLateral {
+	  
+		width: 15em;
+		height: 40em;
+		margin: 0 auto;
+		border-radius: 25px;
+        border: 2px solid #009ae1;
+        padding: 20px;
+		
+		float:left;
+		
+	}
+    #content {
+		width: 30em;
+		height: 30em;
+		margin: 0 auto;
+		display: block;
+		
+	}
+	
+	.button { 	
+	  position: relative;
+	  float:left;		
+    }
+	
