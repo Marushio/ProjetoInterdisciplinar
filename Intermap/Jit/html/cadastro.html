@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Intermap Novos Dados</title>
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="css/style.css" />
+	
+	<script src="js/jquery2.1.4.js" type="text/javascript"></script>
+	<script src="js/cadastro.js" type="text/javascript"></script>
+	<script></script>	
+  </head>
+	<body>
+		<fieldset>
+			<legend>Cadastrar Usuario</legend>
+			<label for="usuarioLogin">Login:</label>
+			<input type="text" name="usuarioLogin" id="usuarioLogin"/>    
+			<label for="usuarioSenha">Senha:</label>
+			<input type="text" name="usuarioSenha" id="usuarioSenha" />    
+			<br />     
+			<input type="button" id="botao" class="button" onclick="cadastrarUsuario('usuario_remetente');" value="Cadastrar Usuario">
+			<div id="mensagemUsuario"></div>
+		</fieldset>
+		<fieldset>	  
+			<legend>Cadastrar Interação</legend>
+			<label for="usuario_remetente">Usuario Origem:</label>
+			<select id="usuario_remetente" onFocus="iniciarOpcoes('usuario_remetente');">
+			<option>Escolher...</option><select/>			
+			<label for="codUsuarioDestino">Usuario Destino:</label>
+			<select id="codUsuarioDestino" onFocus="iniciarOpcoes('codUsuarioDestino');">
+			<option>Escolher...</option><select/>
+			<br />     
+			<input type="button" id="botao" class="button" onclick="cadastrarInteracao();" value="Cadastrar Interação">
+			<div id="mensagemInteracao"></div>
+		</fieldset>	  
+			<fieldset>
+			<legend>Apagar Usuario</legend>
+			<label for="usuario_remover">Usuario</label>
+			<select id="usuario_remover" onFocus="iniciarOpcoes('usuario_remover');">
+			<option>Escolher...</option><select/>	
+			<br />     
+			<input type="button" id="botao" class="button" onclick="removerUsuario('usuario_remover')" value="Remover">
+			<div id="mensagemRemocao"></div>
+		</fieldset>
+		<fieldset>
+			<legend>Alterar Usuario ou Senha </legend>
+			<label for="usuarioAlterar">Usuario</label>
+			<select id="usuarioAlterar" onFocus="iniciarOpcoes('usuarioAlterar');">
+			<option>Escolher...</option><select/>		
+			<label for="novoUsuarioLogin">Novo Login:</label>
+			<input type="text" name="novoUsuarioLogin" id="novoUsuarioLogin"/>
+			<label for="novoUsuarioSenha">Nova Senha:</label>
+			<input type="text" name="novoUsuarioSenha" id="novoUsuarioSenha"/>
+			<br />     
+			<input type="button" class="button" id="botao" onclick="alterarUsuario('usuarioAlterar');" value="Alterar">
+			<div id="mensagemAlteracao"></div>
+		</fieldset>
+	</body>
+</html>

@@ -1,0 +1,94 @@
+	html, body {
+	font-family: "Open Sans", Verdana;	
+	}	
+	.linha {
+	  
+		width: 25em;
+	    height: 0.5em;
+		display: block;
+		border-radius: 25px;
+        border: 2px solid #009ae1;
+        padding: 20px;
+		}
+	.apresentacao {
+	  
+		width: 20em;
+		height: 20em;
+		margin: 0 auto;
+		display: block;
+		border-radius: 25px;
+        border: 2px solid #009ae1;
+        padding: 20px; 
+		float:left;
+	}
+	fieldset{
+		border: 2px solid #009ae1;
+		text-align: left;
+	}
+	select,label,input{
+	
+	display: block;
+	
+	}
+	
+		.top {
+	  
+		width: 20em;
+		height: 20em;
+		margin: 0 auto;
+		display: block;
+		border-radius: 25px;
+        border: 2px solid #009ae1;
+        padding: 20px; 
+		position:relative;
+		float:left;
+	}
+	.menuLateral {
+	  
+		width: 15em;
+		height: 40em;
+		margin: 0 auto;
+		border-radius: 25px;
+        border: 2px solid #009ae1;
+        padding: 20px;
+		
+		float:left;
+		
+	}
+    #content {
+		width: 30em;
+		height: 30em;
+		margin: 0 auto;
+		display: block;
+		
+	}
+	
+	 
+	
+		
+	.button {
+    background:#009ae1;
+    
+    color:#FFF;
+    padding:2px 8px;
+    border-radius:5px;
+    text-shadow:none;
+    display:inline-block;
+    border:none;
+    cursor:pointer;
+    }
+
+    .button:hover {
+    background:#0073a1;
+    text-decoration: none;
+    }
+
+   
+	
+	
+
+
+
+  
+	
+	
