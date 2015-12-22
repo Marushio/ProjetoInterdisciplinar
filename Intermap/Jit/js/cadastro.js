@@ -15,7 +15,11 @@ function iniciarOpcoes(id){
 				url: "php/cadastro.php",
 					success: function( data ) {
 					$("#mensagemUsuario").html(data);
+					document.getElementById("usuarioLogin").value="";
+					document.getElementById("usuarioSenha").value="";
+					
 					iniciarOpcoes(id);
+					
 				},
 				data: {login: login,Senha:Senha},
 				error: function(data){
@@ -25,7 +29,9 @@ function iniciarOpcoes(id){
 		};
 		function cadastrarInteracao(){			
 			var usuario_r = $("#usuario_remetente").val();
-			var codUsuario = $("#codUsuarioDestino").val();			 
+			var codUsuario = $("#codUsuarioDestino").val();	
+			var dataMensagem = $("#data_Mensagem").val();	
+			
 			$.ajax({
 				method: "get",
 				url: "php/cadastro.php",
@@ -33,7 +39,7 @@ function iniciarOpcoes(id){
 					
 					$("#mensagemInteracao").html(data);
 				},
-				data: {usuario_r: usuario_r,codUsuario:codUsuario},
+				data: {usuario_r: usuario_r,codUsuario:codUsuario,dataMensagem:dataMensagem},
 				error: function(data){
 						alert(data);
 					}			
@@ -61,9 +67,11 @@ function iniciarOpcoes(id){
 			$.ajax({
 				method: "get",
 				url: "php/cadastro.php",
-					success: function( data ) {					
+				success: function( data ) {					
 					$("#mensagemAlteracao").html(data);	
 					iniciarOpcoes(id);
+					document.getElementById("novoUsuarioLogin").value="";
+					document.getElementById("novoUsuarioSenha").value="";
 					},
 				data: {novo_UsuarioLogin: novo_UsuarioLogin,
 					   novo_UsuarioSenha: novo_UsuarioSenha,

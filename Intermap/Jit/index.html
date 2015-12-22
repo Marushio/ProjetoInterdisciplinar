@@ -19,6 +19,7 @@
 				$( "#linkGraphs" ).click(function(e)
 				{
 				  $("#content").load("html/corpo.html");
+				  $("#right-container").load("html/filtro.html");
 				  
 				  e.preventDefault();
 				  
@@ -27,6 +28,7 @@
 				$( "#linkCadastro" ).click(function(e)
 				{
 				  $("#content").load("html/cadastro.html");
+				  $("#right-container").empty();
 				  
 				  e.preventDefault();
 				  
@@ -55,18 +57,18 @@
 				<li><a href='#'>Fluxo de Conversação</a></li> 		 
 			  </ul>
 		   </li>
-		   <li class='active has-sub'><a href='#'>Bate-papo</a>
+		   <li class='active has-sub' disabled><a href='#'>Bate-papo</a>
 			  <ul>
 				<li id="link"><a href='#'>Mapa de Interação</a></li>
-				<li><a href='#'>Mensagem por participante</a></li>   
+				<li><a href='#' disabled>Mensagem por participante</a></li>   
 				<li><a href='#'>Fluxo de Conversação</a></li>	
 			  </ul>
 		   </li>
-		   <li><a href='#'>Voltar</a></li>
+		   <li><a href='#' disabled >Voltar</a></li>
 		</ul>
 	</div>
-
-	<div id="content"><div>
+	<div id="right-container"></div>
+	<div id="content"></div>
 
 	</body>
 <html>

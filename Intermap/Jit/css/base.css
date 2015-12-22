@@ -47,8 +47,10 @@ a {
 
 #right-container {
     float:left;
-    background-image:url('col1.png');
-    background-position:left;
+  
+    position:absolute;
+	left:0;
+	
    
 }
 

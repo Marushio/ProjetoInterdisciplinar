@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang=''>
+	<head>
+		<!--[if IE]><script language="javascript" type="text/javascript" src="Jit/Extras/excanvas.js"></script><![endif]-->
+
+		<!-- JIT Library File -->
+		<script language="javascript" type="text/javascript" src="js/jit.js"></script>
+
+		<!-- Example File -->
+		<script language="javascript" type="text/javascript" src="js/example1.js"></script>
+
+		<!-- Demais JS -->
+		<script type="text/javascript" src="js/jquery2.1.4.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script>
+			function filtrar(){	
+				
+				  $("#content").load("html/corpo.html");
+				  e.preventDefault();
+				  
+				
+			}	
+		</script>
+	</head>
+<fieldset>
+		<legend>Filtro por data:</legend>
+		<label for="data_Inicio">De:</label>
+		<input type="date" name="data_Inicio" id="data_Inicio"/>    
+		<label for="data_Fim">Até:</label>
+		<input type="date" name="data_Fim" id="data_Fim" />    
+		<br />     
+		<input type="button" id="botaoFiltro" class="button" onclick="filtrar();" value="Gerar Grafo"/>
+		<div id="mensagemUsuario"></div>
+</fieldset>
+</html>

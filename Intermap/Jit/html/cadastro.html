@@ -23,11 +23,13 @@
 		<fieldset>	  
 			<legend>Cadastrar Interação</legend>
 			<label for="usuario_remetente">Usuario Origem:</label>
-			<select id="usuario_remetente" onFocus="iniciarOpcoes('usuario_remetente');">
-			<option>Escolher...</option><select/>			
+			<select id="usuario_remetente" onFocus="iniciarOpcoes('usuario_remetente');"  placeholder="Search Bookmarks and History">
+			<option value="">Escolher...</option><select/>			
 			<label for="codUsuarioDestino">Usuario Destino:</label>
 			<select id="codUsuarioDestino" onFocus="iniciarOpcoes('codUsuarioDestino');">
-			<option>Escolher...</option><select/>
+			<option value="">Escolher...</option><select/>
+			<label for="data_Mensagem">Data:</label>
+			<input type="date" name="data_Mensagem" id="data_Mensagem"/> 
 			<br />     
 			<input type="button" id="botao" class="button" onclick="cadastrarInteracao();" value="Cadastrar Interação">
 			<div id="mensagemInteracao"></div>
@@ -36,7 +38,7 @@
 			<legend>Apagar Usuario</legend>
 			<label for="usuario_remover">Usuario</label>
 			<select id="usuario_remover" onFocus="iniciarOpcoes('usuario_remover');">
-			<option>Escolher...</option><select/>	
+			<option value="">Escolher...</option><select/>	
 			<br />     
 			<input type="button" id="botao" class="button" onclick="removerUsuario('usuario_remover')" value="Remover">
 			<div id="mensagemRemocao"></div>
@@ -45,7 +47,7 @@
 			<legend>Alterar Usuario ou Senha </legend>
 			<label for="usuarioAlterar">Usuario</label>
 			<select id="usuarioAlterar" onFocus="iniciarOpcoes('usuarioAlterar');">
-			<option>Escolher...</option><select/>		
+			<option value="">Escolher...</option><select/>		
 			<label for="novoUsuarioLogin">Novo Login:</label>
 			<input type="text" name="novoUsuarioLogin" id="novoUsuarioLogin"/>
 			<label for="novoUsuarioSenha">Nova Senha:</label>

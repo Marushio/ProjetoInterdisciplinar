@@ -24,18 +24,38 @@ var Log = {
     this.elem.style.left = (500 - this.elem.offsetWidth / 2) + 'px';
   }
 };
-
-
-function init(){
+function initFiltro(){
   // init data
+  var dataInicio = $("#data_Inicio").val();
+  var dataFim = $("#data_Fim").val();
   $.ajax({
 		method: "get",
 		url: "php/pesquisa.php",
 		success: function(data){
 			fazNos(data);
-		}
+		},
+		data: {dataInicio:dataInicio,dataFim:dataFim},
+		error: function(data){
+			alert(data);
+		}	
+	});    
+}
+function init(){
+  // init data
+  var dataInicio = $("#data_Inicio").val();
+  var dataFim = $("#data_Fim").val();
+  $.ajax({
+		method: "get",
+		url: "php/pesquisa.php",
+		success: function(data){
+			fazNos(data);
+		},
+		data: {dataInicio:dataInicio,dataFim:dataFim},
+		error: function(data){
+			alert("Intervalo de data invalido!");
+		}	
 	});
-     
+ 
   
 	function fazNos(json){	  
 		  // end
